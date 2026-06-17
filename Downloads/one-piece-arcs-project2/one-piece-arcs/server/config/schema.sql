@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS arcs;
+
+CREATE TABLE arcs (
+  id SERIAL PRIMARY KEY,
+  slug VARCHAR(100) UNIQUE NOT NULL,
+  name VARCHAR(150) NOT NULL,
+  saga VARCHAR(100) NOT NULL,
+  location VARCHAR(150) NOT NULL,
+  episodes VARCHAR(50) NOT NULL,
+  description TEXT NOT NULL,
+  key_characters TEXT[] NOT NULL,
+  image VARCHAR(255) NOT NULL
+);
